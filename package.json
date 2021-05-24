@@ -1,7 +1,7 @@
 {
   "name": "create-catalyst",
   "description": "Create a project for GitHub's Catalyst Web Component library.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Dan Valinotti <dvalinotti@icloud.com>",
   "scripts": {
     "build": "tsup src/cli.ts --minify",
