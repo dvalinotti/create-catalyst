@@ -15,12 +15,12 @@ create('create-catalyst', {
     return name.includes('-') ? name : `${name}-component`
   },
   caveat: ({ name }: AfterHookOptions) => {
-    const { green, blue, red } = chalk.bold;
+    const { green, blue, underline } = chalk.bold;
     let output = `cd ${green(name)}\n\n`
     output += `Commands:\n`
     output += `${blue('yarn dev')} - Start development server\n`
     output += `${blue('yarn build')} - Build for production\n\n`
-    output += `${red('IMPORTANT:')}\n`
+    output += `${underline('IMPORTANT:')}\n`
     output += `If your project name was not a two-word camel-case string (ie, hello-world) it has been appended with "-component" so that it is a valid custom element name.`
     return output;
   }
