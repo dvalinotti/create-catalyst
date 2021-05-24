@@ -1,0 +1,25 @@
+{
+  "name": "create-catalyst",
+  "description": "Create a project for GitHub's Catalyst Web Component library.",
+  "version": "0.0.0",
+  "author": "Dan Valinotti <dvalinotti@icloud.com>",
+  "scripts": {
+    "build": "tsup src/cli.ts --minify",
+    "clean": "shx rm -rf lib",
+    "dev": "tsup src/cli.ts --watch",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "bin": "dist/cli.js",
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "dependencies": {
+    "create-create-app": "^7.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^3.6.1",
+    "typescript": "^4.0.2"
+  },
+  "license": "ISC"
+}
